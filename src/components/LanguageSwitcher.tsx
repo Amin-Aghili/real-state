@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '@/i18n/client';
 import { Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -8,20 +10,25 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useRouter, usePathname } from 'next/navigation';
+import { languages } from '@/i18n/settings';
 
-const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+const LanguageSwitcher = ({ lng }: { lng: string }) => {
+  const { i18n } = useTranslation(lng);
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
-  const languages = [
+  const languageOptions = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
     { code: 'tr', name: 'Türkçe', flag: '🇹🇷' }
   ];
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const currentLanguage = languageOptions.find(lang => lang.code === lng) || languageOptions[0];
 
-  const changeLanguage = (languageCode: string) => {
-    i18n.changeLanguage(languageCode);
+  const changeLanguage = (newLng: string) => {
+    const newPath = pathname.replace(`/${lng}`, `/${newLng}`);
+    router.push(newPath);
     setIsOpen(false);
   };
 
@@ -39,7 +46,7 @@ const LanguageSwitcher = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="glass border-border/20">
-        {languages.map((language) => (
+        {languageOptions.map((language) => (
           <DropdownMenuItem
             key={language.code}
             onClick={() => changeLanguage(language.code)}

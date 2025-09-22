@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PropertyCard, { Property } from '@/components/PropertyCard';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Users, Award } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '@/i18n/client';
 
 // Import images
 import heroBg from '@/assets/hero-bg.jpg';
@@ -46,19 +48,19 @@ const featuredProperties: Property[] = [
   },
 ];
 
-const Index = () => {
-  const { t } = useTranslation();
+const Index = ({ params: { lng } }: { params: { lng: string } }) => {
+  const { t } = useTranslation(lng);
   
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header lng={lng} />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(${heroBg})`,
+            backgroundImage: `url(${heroBg.src})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -75,13 +77,13 @@ const Index = () => {
             {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/listings">
+            <Link href={`/${lng}/listings`}>
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg">
                 {t('hero.viewProperties')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link href={`/${lng}/contact`}>
               <Button 
                 variant="outline" 
                 size="lg" 
@@ -148,12 +150,12 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {featuredProperties.map((property) => (
-              <PropertyCard key={property.id} property={property} />
+              <PropertyCard key={property.id} property={property} lng={lng} />
             ))}
           </div>
 
           <div className="text-center">
-            <Link to="/listings">
+            <Link href={`/${lng}/listings`}>
               <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
                 {t('featured.viewAll')}
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -172,7 +174,7 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             {t('cta.subtitle')}
           </p>
-          <Link to="/contact">
+          <Link href={`/${lng}/contact`}>
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg">
               {t('cta.getStarted')}
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -181,7 +183,7 @@ const Index = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer lng={lng} />
     </div>
   );
 };

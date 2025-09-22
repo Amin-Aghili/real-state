@@ -1,15 +1,17 @@
+"use client";
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '@/i18n/client';
 
-const Contact = () => {
-  const { t } = useTranslation();
+const Contact = ({ params: { lng } }: { params: { lng: string } }) => {
+  const { t } = useTranslation(lng);
   
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header lng={lng} />
       
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4">
@@ -104,7 +106,7 @@ const Contact = () => {
         </div>
       </main>
 
-      <Footer />
+      <Footer lng={lng} />
     </div>
   );
 };

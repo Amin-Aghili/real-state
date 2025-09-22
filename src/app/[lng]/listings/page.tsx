@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -74,7 +76,7 @@ const sampleProperties: Property[] = [
   },
 ];
 
-const Listings = () => {
+const Listings = ({ params: { lng } }: { params: { lng: string } }) => {
   const [properties, setProperties] = useState<Property[]>(sampleProperties);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('price-asc');
@@ -107,7 +109,7 @@ const Listings = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header lng={lng} />
       
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4">
@@ -153,7 +155,7 @@ const Listings = () => {
           {/* Properties Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProperties.map((property) => (
-              <PropertyCard key={property.id} property={property} />
+              <PropertyCard key={property.id} property={property} lng={lng} />
             ))}
           </div>
 
@@ -165,7 +167,7 @@ const Listings = () => {
         </div>
       </main>
 
-      <Footer />
+      <Footer lng={lng} />
     </div>
   );
 };
