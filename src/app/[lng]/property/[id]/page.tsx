@@ -1,4 +1,7 @@
-import { useParams, Link } from 'react-router-dom';
+"use client";
+
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
@@ -35,8 +38,9 @@ const sampleProperty = {
   parkingSpaces: 1,
 };
 
-const PropertyDetails = () => {
-  const { id } = useParams();
+const PropertyDetails = ({ params: { lng } }: { params: { lng: string } }) => {
+  const params = useParams();
+  const id = params.id;
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -48,13 +52,13 @@ const PropertyDetails = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header lng={lng} />
       
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4">
           {/* Back Button */}
           <div className="mb-6">
-            <Link to="/listings">
+            <Link href={`/${lng}/listings`}>
               <Button variant="ghost" className="text-accent hover:bg-accent/10">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Properties
@@ -68,7 +72,7 @@ const PropertyDetails = () => {
               {/* Main Image */}
               <div className="aspect-[4/3] rounded-xl overflow-hidden">
                 <img
-                  src={sampleProperty.image_url}
+                  src={sampleProperty.image_url.src}
                   alt={sampleProperty.title}
                   className="w-full h-full object-cover"
                 />
@@ -160,7 +164,7 @@ const PropertyDetails = () => {
         </div>
       </main>
 
-      <Footer />
+      <Footer lng={lng} />
     </div>
   );
 };

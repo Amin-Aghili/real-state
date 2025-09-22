@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
-import { Building2, Phone, Mail, MapPin } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+"use client";
 
-const Footer = () => {
-  const { t } = useTranslation();
+import Link from 'next/link';
+import { Building2, Phone, Mail, MapPin } from 'lucide-react';
+import { useTranslation } from '@/i18n/client';
+
+const Footer = ({ lng }: { lng: string }) => {
+  const { t } = useTranslation(lng);
   
   return (
     <footer className="bg-card/30 border-t border-border/20 backdrop-blur-sm">
@@ -11,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link href={`/${lng}`} className="flex items-center space-x-2">
               <Building2 className="h-6 w-6 text-accent" />
               <span className="text-lg font-bold text-gradient">EliteProperties</span>
             </Link>
@@ -26,7 +28,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link 
-                  to="/" 
+                  href={`/${lng}`}
                   className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   {t('nav.home')}
@@ -34,7 +36,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/listings" 
+                  href={`/${lng}/listings`}
                   className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   {t('nav.properties')}
@@ -42,7 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/contact" 
+                  href={`/${lng}/contact`}
                   className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   {t('nav.contact')}
