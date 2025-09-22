@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "properties": "Emlaklar",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Hayalinizdeki",
+    "titleHighlight": "Evi Bulun",
+    "subtitle": "Uzman emlak ekibimizle premium mülkleri keşfedin. Mükemmel eviniz sadece bir tık uzağınızda.",
+    "viewProperties": "Emlakları Görüntüle",
+    "contactUs": "Bize Ulaşın"
+  },
+  "about": {
+    "title": "Neden EliteProperties",
+    "subtitle": "Yıllarca süren uzmanlık ve mükemmellik anlayışıyla, emlak yolculuğunuzu sorunsuz ve başarılı kılıyoruz.",
+    "premiumService": {
+      "title": "Premium Hizmet",
+      "description": "Emlak yolculuğunuz boyunca kişiselleştirilmiş dikkat ve uzman rehberliği."
+    },
+    "trustedPartners": {
+      "title": "Güvenilir Ortaklar",
+      "description": "Şeffaflık ve dürüstlük ile müşterilerle kalıcı ilişkiler kuruyoruz."
+    },
+    "marketExpertise": {
+      "title": "Pazar Uzmanlığı",
+      "description": "Bilinçli kararlar vermenize yardımcı olacak derin yerel bilgi ve pazar anlayışı."
+    }
+  },
+  "featured": {
+    "title": "Öne Çıkan Emlaklar",
+    "subtitle": "Özenle seçilmiş premium mülk koleksiyonumuzu keşfedin",
+    "viewAll": "Tüm Emlakları Görüntüle"
+  },
+  "cta": {
+    "title": "Mükemmel",
+    "titleHighlight": "Evinizi Bulmaya Hazır mısınız?",
+    "subtitle": "Deneyimli ekibimizin emlak piyasasında size rehberlik etmesine ve hayalinizdeki mülkü bulmasına izin verin.",
+    "getStarted": "Bugün Başlayın"
+  },
+  "footer": {
+    "companyDescription": "Mükemmel mülkü bulmada güvenilir ortağınız. Kişiselleştirilmiş hizmet ve uzman pazar bilgisiyle lüks emlak konusunda uzmanız.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "servicesList": {
+      "sales": "Emlak Satışı",
+      "rentals": "Emlak Kiralama",
+      "management": "Emlak Yönetimi",
+      "consulting": "Yatırım Danışmanlığı"
+    },
+    "copyright": "© 2024 EliteProperties. Tüm hakları saklıdır."
+  },
+  "listings": {
+    "title": "Emlak Listeleri",
+    "subtitle": "Geniş premium mülk koleksiyonumuza göz atın",
+    "filters": {
+      "all": "Tüm Emlaklar",
+      "sale": "Satılık",
+      "rent": "Kiralık"
+    },
+    "sort": {
+      "label": "Sırala",
+      "priceLowHigh": "Fiyat: Düşükten Yükseğe",
+      "priceHighLow": "Fiyat: Yüksekten Düşüğe",
+      "newest": "Önce En Yeniler"
+    },
+    "bedrooms": "yatak odası",
+    "bathrooms": "banyo",
+    "area": "metrekare"
+  },
+  "propertyDetails": {
+    "backToListings": "Listelere Dön",
+    "overview": "Genel Bakış",
+    "features": "Özellikler",
+    "contact": "Temsilciyle İletişim",
+    "interested": "Bu mülkle ilgileniyor musunuz?",
+    "getInTouch": "Uzman ekibimizle iletişime geçin"
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Kişiselleştirilmiş yardım için uzman ekibimizle iletişime geçin",
+    "form": {
+      "name": "Ad Soyad",
+      "namePlaceholder": "Adınızı ve soyadınızı girin",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "message": "Mesaj",
+      "messagePlaceholder": "Emlak ihtiyaçlarınız hakkında bize bilgi verin...",
+      "submit": "Mesaj Gönder",
+      "submitting": "Gönderiliyor...",
+      "success": "Mesaj başarıyla gönderildi! En kısa sürede size döneceğiz.",
+      "error": "Mesaj gönderilemedi. Lütfen tekrar deneyin."
+    },
+    "info": {
+      "phone": "(555) 123-4567",
+      "email": "info@eliteproperties.com",
+      "address": "123 Real Estate Ave, City, State 12345"
+    }
+  },
+  "property": {
+    "viewDetails": "Detayları Görüntüle"
+  },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "subtitle": "Üzgünüz, aradığınız sayfa mevcut değil.",
+    "backHome": "Ana Sayfaya Dön"
+  },
+  "language": {
+    "switch": "Dil"
+  }
+}

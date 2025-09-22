@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "properties": "Properties",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Find Your",
+    "titleHighlight": "Dream Home",
+    "subtitle": "Discover premium properties with our expert real estate team. Your perfect home is just one click away.",
+    "viewProperties": "View Properties",
+    "contactUs": "Contact Us"
+  },
+  "about": {
+    "title": "Why Choose EliteProperties",
+    "subtitle": "With years of expertise and a commitment to excellence, we make your real estate journey seamless and successful.",
+    "premiumService": {
+      "title": "Premium Service",
+      "description": "Personalized attention and expert guidance throughout your property journey."
+    },
+    "trustedPartners": {
+      "title": "Trusted Partners",
+      "description": "Building lasting relationships with clients through transparency and integrity."
+    },
+    "marketExpertise": {
+      "title": "Market Expertise",
+      "description": "Deep local knowledge and market insights to help you make informed decisions."
+    }
+  },
+  "featured": {
+    "title": "Featured Properties",
+    "subtitle": "Discover our handpicked selection of premium properties",
+    "viewAll": "View All Properties"
+  },
+  "cta": {
+    "title": "Ready to Find Your",
+    "titleHighlight": "Perfect Home?",
+    "subtitle": "Let our experienced team help you navigate the real estate market and find the property of your dreams.",
+    "getStarted": "Get Started Today"
+  },
+  "footer": {
+    "companyDescription": "Your trusted partner in finding the perfect property. We specialize in luxury real estate with personalized service and expert market knowledge.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "servicesList": {
+      "sales": "Property Sales",
+      "rentals": "Property Rentals",
+      "management": "Property Management",
+      "consulting": "Investment Consulting"
+    },
+    "copyright": "© 2024 EliteProperties. All rights reserved."
+  },
+  "listings": {
+    "title": "Property Listings",
+    "subtitle": "Browse our extensive collection of premium properties",
+    "filters": {
+      "all": "All Properties",
+      "sale": "For Sale",
+      "rent": "For Rent"
+    },
+    "sort": {
+      "label": "Sort by",
+      "priceLowHigh": "Price: Low to High",
+      "priceHighLow": "Price: High to Low",
+      "newest": "Newest First"
+    },
+    "bedrooms": "bedrooms",
+    "bathrooms": "bathrooms",
+    "area": "sq ft"
+  },
+  "propertyDetails": {
+    "backToListings": "Back to Listings",
+    "overview": "Overview",
+    "features": "Features",
+    "contact": "Contact Agent",
+    "interested": "Interested in this property?",
+    "getInTouch": "Get in touch with our expert team"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our expert team for personalized assistance",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your property needs...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "phone": "(555) 123-4567",
+      "email": "info@eliteproperties.com",
+      "address": "123 Real Estate Ave, City, State 12345"
+    }
+  },
+  "property": {
+    "viewDetails": "View Details"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "Sorry, the page you are looking for doesn't exist.",
+    "backHome": "Back to Home"
+  },
+  "language": {
+    "switch": "Language"
+  }
+}
