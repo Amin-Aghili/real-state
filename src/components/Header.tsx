@@ -9,8 +9,10 @@ import { useTranslation } from "@/i18n/client";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
 
-const Header = ({ lng }: { lng: string }) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const params = useParams();
+  const lng = params.lng as string;
   const pathname = usePathname();
   const { t } = useTranslation(lng);
 
