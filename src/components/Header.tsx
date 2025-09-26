@@ -2,17 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname, useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Menu, X, Home, Building2, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/i18n/client";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
 
-const Header = () => {
+const Header = ({ lng }: { lng: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const params = useParams();
-  const lng = params.lng as string;
   const pathname = usePathname();
   const { t } = useTranslation(lng);
 
