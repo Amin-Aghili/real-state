@@ -35,8 +35,7 @@ export const AgentProfileCard = ({ agent, lng }: { agent: Agent, lng: string }) 
             src={agent.imageUrl}
             alt={agent.name}
             fill
-            objectFit="cover"
-            className="rounded-full border-4 border-accent"
+            className="object-cover rounded-full border-4 border-accent"
           />
         </div>
         <h1 className="text-3xl font-bold text-gradient">{agent.name}</h1>
