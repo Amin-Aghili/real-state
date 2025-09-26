@@ -112,6 +112,15 @@
   "agent": {
     "showQr": "QR Kodu Göster",
     "hideQr": "QR Kodu Gizle",
-    "portfolioTitle": "Portföy"
+    "portfolioTitle": "Portföy",
+    "ourTeam": "Uzman Ekibimiz",
+    "ourTeamSubtitle": "Hayallerinizi gerçeğe dönüştüren özverili profesyonellerle tanışın.",
+    "joined": "Katıldı"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "properties": "Emlaklar",
+    "contact": "İletişim",
+    "ourTeam": "Ekibimiz"
   }
 }

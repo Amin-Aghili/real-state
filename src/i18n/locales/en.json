@@ -112,6 +112,15 @@
   "agent": {
     "showQr": "Show QR Code",
     "hideQr": "Hide QR Code",
-    "portfolioTitle": "Portfolio"
+    "portfolioTitle": "Portfolio",
+    "ourTeam": "Our Expert Team",
+    "ourTeamSubtitle": "Meet the dedicated professionals who make your real estate dreams a reality.",
+    "joined": "Joined"
+  },
+  "nav": {
+    "home": "Home",
+    "properties": "Properties",
+    "contact": "Contact",
+    "ourTeam": "Our Team"
   }
 }

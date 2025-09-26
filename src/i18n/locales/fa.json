@@ -112,6 +112,15 @@
   "agent": {
     "showQr": "نمایش کد QR",
     "hideQr": "پنهان کردن کد QR",
-    "portfolioTitle": "نمونه کارها"
+    "portfolioTitle": "نمونه کارها",
+    "ourTeam": "تیم متخصص ما",
+    "ourTeamSubtitle": "با متخصصان متعهدی آشنا شوید که رویاهای ملکی شما را به واقعیت تبدیل می‌کنند.",
+    "joined": "تاریخ عضویت"
+  },
+  "nav": {
+    "home": "خانه",
+    "properties": "املاک",
+    "contact": "تماس با ما",
+    "ourTeam": "تیم ما"
   }
 }

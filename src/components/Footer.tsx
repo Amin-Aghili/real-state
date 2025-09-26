@@ -53,6 +53,14 @@ const Footer = () => {
                   {t('nav.contact')}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href={`/${lng}/agent`}
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
+                  {t('nav.ourTeam')}
+                </Link>
+              </li>
             </ul>
           </div>
 
