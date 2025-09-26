@@ -44,9 +44,8 @@ const AgentsListPage = ({ params: { lng } }: { params: { lng: string } }) => {
                     <Image
                       src={agent.imageUrl}
                       alt={agent.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   </div>
