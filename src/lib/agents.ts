@@ -21,7 +21,7 @@ export const agents: Agent[] = [
     name: 'Ali Ahmadi',
     title: 'Senior Real Estate Agent',
     startDate: '2020-05-15',
-    imageUrl: '/images/agents/ali-ahmadi.svg',
+    imageUrl: 'https://placehold.co/400x400/jpg',
     socials: [
       { name: 'Twitter', url: 'https://twitter.com/ali' },
       { name: 'LinkedIn', url: 'https://linkedin.com/in/ali' },
@@ -30,12 +30,12 @@ export const agents: Agent[] = [
       {
         title: 'Luxury Villa in North Tehran',
         description: 'Sold a 5-bedroom luxury villa with a pool.',
-        imageUrl: '/images/portfolio/villa1.svg',
+        imageUrl: 'https://placehold.co/600x400/jpg',
       },
       {
         title: 'Modern Apartment Downtown',
         description: 'Leased a high-end apartment with city views.',
-        imageUrl: '/images/portfolio/apartment1.svg',
+        imageUrl: 'https://placehold.co/600x400/jpg',
       },
     ],
   },
@@ -44,7 +44,7 @@ export const agents: Agent[] = [
     name: 'Sara Mohammadi',
     title: 'Commercial Property Specialist',
     startDate: '2019-11-01',
-    imageUrl: '/images/agents/sara-mohammadi.svg',
+    imageUrl: 'https://placehold.co/400x400/jpg',
     socials: [
       { name: 'LinkedIn', url: 'https://linkedin.com/in/sara' },
       { name: 'Instagram', url: 'https://instagram.com/sara' },
@@ -53,12 +53,12 @@ export const agents: Agent[] = [
       {
         title: 'Office Space in Business Park',
         description: 'Facilitated the sale of a 10,000 sq. ft. office space.',
-        imageUrl: '/images/portfolio/office1.svg',
+        imageUrl: 'https://placehold.co/600x400/jpg',
       },
       {
         title: 'Retail Storefront',
         description: 'Negotiated a long-term lease for a prime retail location.',
-        imageUrl: '/images/portfolio/retail1.svg',
+        imageUrl: 'https://placehold.co/600x400/jpg',
       },
     ],
   },
@@ -67,7 +67,7 @@ export const agents: Agent[] = [
     name: 'Reza Karimi',
     title: 'Residential Agent',
     startDate: '2022-03-20',
-    imageUrl: '/images/agents/reza-karimi.svg',
+    imageUrl: 'https://placehold.co/400x400/jpg',
     socials: [
       { name: 'Facebook', url: 'https://facebook.com/reza' },
       { name: 'Twitter', url: 'https://twitter.com/reza' },
@@ -76,7 +76,7 @@ export const agents: Agent[] = [
       {
         title: 'Family Home in the Suburbs',
         description: 'Helped a young family find their dream home.',
-        imageUrl: '/images/portfolio/home1.svg',
+        imageUrl: 'https://placehold.co/600x400/jpg',
       },
     ],
   },
@@ -85,7 +85,7 @@ export const agents: Agent[] = [
     name: 'Maryam Hashemi',
     title: 'Investment Advisor',
     startDate: '2021-08-10',
-    imageUrl: '/images/agents/maryam-hashemi.svg',
+    imageUrl: 'https://placehold.co/400x400/jpg',
     socials: [
       { name: 'LinkedIn', url: 'https://linkedin.com/in/maryam' },
     ],
@@ -93,12 +93,12 @@ export const agents: Agent[] = [
       {
         title: 'Real Estate Investment Trust (REIT)',
         description: 'Advised on a multi-million dollar REIT portfolio.',
-        imageUrl: '/images/portfolio/investment1.svg',
+        imageUrl: 'https://placehold.co/600x400/jpg',
       },
       {
         title: 'Development Land',
         description: 'Sourced and negotiated the purchase of land for a new development.',
-        imageUrl: '/images/portfolio/land1.svg',
+        imageUrl: 'https://placehold.co/600x400/jpg',
       },
     ],
   },
