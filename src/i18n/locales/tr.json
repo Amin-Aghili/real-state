@@ -108,5 +108,10 @@
   },
   "language": {
     "switch": "Dil"
+  },
+  "agent": {
+    "showQr": "QR Kodu Göster",
+    "hideQr": "QR Kodu Gizle",
+    "portfolioTitle": "Portföy"
   }
 }

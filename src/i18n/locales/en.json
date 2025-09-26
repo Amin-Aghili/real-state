@@ -108,5 +108,10 @@
   },
   "language": {
     "switch": "Language"
+  },
+  "agent": {
+    "showQr": "Show QR Code",
+    "hideQr": "Hide QR Code",
+    "portfolioTitle": "Portfolio"
   }
 }
