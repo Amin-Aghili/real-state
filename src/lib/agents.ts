@@ -2,6 +2,7 @@ export interface Agent {
   slug: string;
   name: string;
   title: string;
+  startDate: string;
   imageUrl: string;
   socials: {
     name: 'Facebook' | 'Twitter' | 'LinkedIn' | 'Instagram';
@@ -19,6 +20,7 @@ export const agents: Agent[] = [
     slug: 'ali-ahmadi',
     name: 'Ali Ahmadi',
     title: 'Senior Real Estate Agent',
+    startDate: '2020-05-15',
     imageUrl: '/images/agents/ali-ahmadi.jpg',
     socials: [
       { name: 'Twitter', url: 'https://twitter.com/ali' },
@@ -41,6 +43,7 @@ export const agents: Agent[] = [
     slug: 'sara-mohammadi',
     name: 'Sara Mohammadi',
     title: 'Commercial Property Specialist',
+    startDate: '2019-11-01',
     imageUrl: '/images/agents/sara-mohammadi.jpg',
     socials: [
       { name: 'LinkedIn', url: 'https://linkedin.com/in/sara' },
@@ -63,6 +66,7 @@ export const agents: Agent[] = [
     slug: 'reza-karimi',
     name: 'Reza Karimi',
     title: 'Residential Agent',
+    startDate: '2022-03-20',
     imageUrl: '/images/agents/reza-karimi.jpg',
     socials: [
       { name: 'Facebook', url: 'https://facebook.com/reza' },
@@ -80,6 +84,7 @@ export const agents: Agent[] = [
     slug: 'maryam-hashemi',
     name: 'Maryam Hashemi',
     title: 'Investment Advisor',
+    startDate: '2021-08-10',
     imageUrl: '/images/agents/maryam-hashemi.jpg',
     socials: [
       { name: 'LinkedIn', url: 'https://linkedin.com/in/maryam' },
