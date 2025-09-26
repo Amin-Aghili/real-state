@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Bed, Bath, Square, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslation } from '@/i18n/client';
+import { useParams } from 'next/navigation';
+
 export interface Property {
   id: string;
   title: string;
@@ -17,10 +19,11 @@ export interface Property {
 
 interface PropertyCardProps {
   property: Property;
-  lng: string;
 }
 
-const PropertyCard = ({ property, lng }: PropertyCardProps) => {
+const PropertyCard = ({ property }: PropertyCardProps) => {
+  const params = useParams();
+  const lng = params.lng as string;
   const { t } = useTranslation(lng);
   
   const formatPrice = (price: number) => {

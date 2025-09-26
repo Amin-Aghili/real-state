@@ -109,7 +109,7 @@ const Listings = ({ params: { lng } }: { params: { lng: string } }) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header lng={lng} />
+      <Header />
       
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4">
@@ -155,7 +155,7 @@ const Listings = ({ params: { lng } }: { params: { lng: string } }) => {
           {/* Properties Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProperties.map((property) => (
-              <PropertyCard key={property.id} property={property} lng={lng} />
+              <PropertyCard key={property.id} property={property} />
             ))}
           </div>
 
@@ -167,7 +167,7 @@ const Listings = ({ params: { lng } }: { params: { lng: string } }) => {
         </div>
       </main>
 
-      <Footer lng={lng} />
+      <Footer />
     </div>
   );
 };

@@ -3,8 +3,11 @@
 import Link from 'next/link';
 import { Building2, Phone, Mail, MapPin } from 'lucide-react';
 import { useTranslation } from '@/i18n/client';
+import { useParams } from 'next/navigation';
 
-const Footer = ({ lng }: { lng: string }) => {
+const Footer = () => {
+  const params = useParams();
+  const lng = params.lng as string;
   const { t } = useTranslation(lng);
   
   return (

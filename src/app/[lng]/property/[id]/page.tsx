@@ -52,7 +52,7 @@ const PropertyDetails = ({ params: { lng } }: { params: { lng: string } }) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header lng={lng} />
+      <Header />
       
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4">
@@ -164,7 +164,7 @@ const PropertyDetails = ({ params: { lng } }: { params: { lng: string } }) => {
         </div>
       </main>
 
-      <Footer lng={lng} />
+      <Footer />
     </div>
   );
 };
