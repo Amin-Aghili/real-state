@@ -1,21 +1,21 @@
 "use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Card, CardContent } from '@/components/ui/card';
-import { useTranslation } from '@/i18n/client';
-import { agents } from '@/lib/agents';
-import { Calendar } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "@/i18n/client";
+import { agents } from "@/lib/agents";
+import { Calendar } from "lucide-react";
 
 const AgentsListPage = ({ params: { lng } }: { params: { lng: string } }) => {
-  const { t } = useTranslation(lng, 'agent');
+  const { t } = useTranslation(lng, "agent");
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString(lng, {
-      year: 'numeric',
-      month: 'long',
+      year: "numeric",
+      month: "long",
     });
   };
 
@@ -27,10 +27,10 @@ const AgentsListPage = ({ params: { lng } }: { params: { lng: string } }) => {
         {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-            {t('ourTeam')}
+            {t("ourTeam")}
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t('ourTeamSubtitle')}
+            {t("ourTeamSubtitle")}
           </p>
         </div>
 
@@ -40,20 +40,25 @@ const AgentsListPage = ({ params: { lng } }: { params: { lng: string } }) => {
             <Link href={`/${lng}/agent/${agent.slug}`} key={agent.slug}>
               <Card className="group overflow-hidden glass transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardContent className="p-0 text-center">
-                  <div className="relative aspect-square w-full">
+                  <div className="relative aspect-square w-full ">
                     <Image
                       src={agent.imageUrl}
                       alt={agent.name}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover"
                     />
-                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   </div>
+
                   <div className="p-4">
-                    <h2 className="text-xl font-bold text-foreground">{agent.name}</h2>
+                    <h2 className="text-xl font-bold text-foreground">
+                      {agent.name}
+                    </h2>
                     <div className="flex items-center justify-center text-muted-foreground mt-2">
                       <Calendar className="h-4 w-4 mr-2" />
-                      <span>{t('joined')}: {formatDate(agent.startDate)}</span>
+                      <span>
+                        {t("joined")}: {formatDate(agent.startDate)}
+                      </span>
                     </div>
                   </div>
                 </CardContent>
