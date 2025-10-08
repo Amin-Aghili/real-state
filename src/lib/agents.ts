@@ -6,9 +6,11 @@ export interface Agent {
   title: string;
   startDate: string;
   imageUrl: string;
+  phone: string;
+  whatsapp: string;
   socials: {
     name: "Facebook" | "Twitter" | "LinkedIn" | "Instagram";
-    url: string;
+    url:string;
   }[];
   portfolio: {
     title: string;
@@ -24,6 +26,8 @@ export const agents: Agent[] = [
     title: "Senior Real Estate Agent",
     startDate: "2020-05-15",
     imageUrl: ali,
+    phone: "+989123456789",
+    whatsapp: "+989123456789",
     socials: [
       { name: "Twitter", url: "https://twitter.com/ali" },
       { name: "LinkedIn", url: "https://linkedin.com/in/ali" },
@@ -47,6 +51,8 @@ export const agents: Agent[] = [
     title: "Commercial Property Specialist",
     startDate: "2019-11-01",
     imageUrl: "https://placehold.co/400x400/jpg",
+    phone: "+989123456788",
+    whatsapp: "+989123456788",
     socials: [
       { name: "LinkedIn", url: "https://linkedin.com/in/sara" },
       { name: "Instagram", url: "https://instagram.com/sara" },
@@ -71,6 +77,8 @@ export const agents: Agent[] = [
     title: "Residential Agent",
     startDate: "2022-03-20",
     imageUrl: "https://placehold.co/400x400/jpg",
+    phone: "+989123456787",
+    whatsapp: "+989123456787",
     socials: [
       { name: "Facebook", url: "https://facebook.com/reza" },
       { name: "Twitter", url: "https://twitter.com/reza" },
@@ -89,6 +97,8 @@ export const agents: Agent[] = [
     title: "Investment Advisor",
     startDate: "2021-08-10",
     imageUrl: "https://placehold.co/400x400/jpg",
+    phone: "+989123456786",
+    whatsapp: "+989123456786",
     socials: [{ name: "LinkedIn", url: "https://linkedin.com/in/maryam" }],
     portfolio: [
       {

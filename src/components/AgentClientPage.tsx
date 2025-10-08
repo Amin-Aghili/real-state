@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { QRCodeCanvas as QRCode } from 'qrcode.react';
-import { Facebook, Twitter, Linkedin, Instagram, QrCode } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, QrCode, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslation } from '@/i18n/client';
@@ -41,24 +41,49 @@ export const AgentProfileCard = ({ agent, lng }: { agent: Agent, lng: string }) 
         <h1 className="text-3xl font-bold text-gradient">{agent.name}</h1>
         <p className="text-muted-foreground text-lg mb-4">{agent.title}</p>
 
-        <div className="flex justify-center space-x-4 mb-6">
-          {agent.socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors"
-              aria-label={social.name}
-            >
-              {socialIcons[social.name]}
-            </a>
-          ))}
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-xl font-semibold text-gradient mb-3">{t('contactTitle', 'Contact')}</h2>
+            <div className="grid grid-cols-2 gap-3">
+              <Button asChild variant="outline">
+                <a href={`tel:${agent.phone}`}>
+                  <Phone className="mr-2 h-5 w-5" /> {t('call', 'Call')}
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={`https://wa.me/${agent.whatsapp.replace(/\+/g, '')}`} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" /> {t('whatsapp', 'WhatsApp')}
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {agent.socials && agent.socials.length > 0 && (
+            <div>
+              <h2 className="text-xl font-semibold text-gradient mb-3">{t('socialsTitle', 'Social Media')}</h2>
+              <div className="flex justify-center space-x-4">
+                {agent.socials.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                    aria-label={social.name}
+                  >
+                    {socialIcons[social.name]}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
+
+        <hr className="my-6 border-border" />
 
         <Button onClick={() => setShowQr(!showQr)} className="w-full">
           <QrCode className="mr-2 h-5 w-5" />
-          {showQr ? t('hideQr') : t('showQr')}
+          {showQr ? t('hideQr', 'Hide QR Code') : t('showQr', 'Show QR Code')}
         </Button>
 
         {showQr && pageUrl && (
