@@ -1,12 +1,9 @@
 'use client';
 
-'use client';
-
 import i18next from 'i18next';
 import {
   initReactI18next,
   useTranslation as useTranslationOrg,
-  UseTranslationOptions,
 } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { getOptions } from './settings';
@@ -35,7 +32,7 @@ i18next
     resources
   });
 
-export function useTranslation(lng: string, ns?: string, options?: UseTranslationOptions) {
+export function useTranslation(lng: string, ns?: string, options?: any) {
   if (i18next.resolvedLanguage !== lng) {
     i18next.changeLanguage(lng);
   }

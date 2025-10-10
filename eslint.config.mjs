@@ -13,12 +13,6 @@ const eslintConfig = [
   ...compat.config({
     extends: ['next/core-web-vitals', 'next/typescript'],
   }),
-  // You can add your own rules here
-  // {
-  //   rules: {
-  //     'semi': 'error',
-  //   }
-  // }
 ];
 
 export default eslintConfig;
