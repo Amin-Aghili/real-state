@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { FileText } from 'lucide-react';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -35,6 +36,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
 
 const AgentPage = async ({ params: { lng, slug } }: { params: { lng: string, slug: string } }) => {
   const agent = getAgentBySlug(slug);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng, 'agent');
 
   if (!agent) {
@@ -74,7 +76,27 @@ const AgentPage = async ({ params: { lng, slug } }: { params: { lng: string, slu
                       </div>
                       <div className="sm:col-span-2">
                         <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                        <p className="text-muted-foreground">{item.description}</p>
+                        <p className="text-muted-foreground mb-4">{item.description}</p>
+                        {item.files && item.files.length > 0 && (
+                          <div>
+                            <h4 className="font-semibold text-foreground mb-2">{t('filesTitle', 'Associated Files')}</h4>
+                            <ul className="space-y-2">
+                              {item.files.map((file, fileIndex) => (
+                                <li key={fileIndex}>
+                                  <a
+                                    href={file.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center text-muted-foreground hover:text-accent transition-colors group"
+                                  >
+                                    <FileText className="mr-2 h-5 w-5 text-accent" />
+                                    <span className="group-hover:underline">{file.name}</span>
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     </div>
                   ))}
