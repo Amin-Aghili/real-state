@@ -1,0 +1,130 @@
+import ali from "@/assets/images/agents/1.jpg";
+
+export interface Agent {
+  slug: string;
+  name: string;
+  title: string;
+  startDate: string;
+  imageUrl: string;
+  phone: string;
+  whatsapp: string;
+  socials: {
+    name: "Facebook" | "Twitter" | "LinkedIn" | "Instagram";
+    url:string;
+  }[];
+  portfolio: {
+    title: string;
+    description: string;
+    imageUrl: string;
+    files?: {
+      name: string;
+      url: string;
+    }[];
+  }[];
+}
+
+export const agents: Agent[] = [
+  {
+    slug: "ali-ahmadi",
+    name: "Ali Ahmadi",
+    title: "Senior Real Estate Agent",
+    startDate: "2020-05-15",
+    imageUrl: ali,
+    phone: "+989123456789",
+    whatsapp: "+989123456789",
+    socials: [
+      { name: "Twitter", url: "https://twitter.com/ali" },
+      { name: "LinkedIn", url: "https://linkedin.com/in/ali" },
+    ],
+    portfolio: [
+      {
+        title: "Luxury Villa in North Tehran",
+        description: "Sold a 5-bedroom luxury villa with a pool.",
+        imageUrl: "https://placehold.co/600x400/jpg",
+        files: [
+          { name: "Property Brochure.pdf", url: "/files/brochure.pdf" },
+          { name: "Floor Plan.pdf", url: "/files/floor-plan.pdf" },
+        ],
+      },
+      {
+        title: "Modern Apartment Downtown",
+        description: "Leased a high-end apartment with city views.",
+        imageUrl: "https://placehold.co/600x400/jpg",
+        files: [{ name: "Apartment Details.pdf", url: "/files/apartment-details.pdf" }],
+      },
+    ],
+  },
+  {
+    slug: "sara-mohammadi",
+    name: "Sara Mohammadi",
+    title: "Commercial Property Specialist",
+    startDate: "2019-11-01",
+    imageUrl: "https://placehold.co/400x400/jpg",
+    phone: "+989123456788",
+    whatsapp: "+989123456788",
+    socials: [
+      { name: "LinkedIn", url: "https://linkedin.com/in/sara" },
+      { name: "Instagram", url: "https://instagram.com/sara" },
+    ],
+    portfolio: [
+      {
+        title: "Office Space in Business Park",
+        description: "Facilitated the sale of a 10,000 sq. ft. office space.",
+        imageUrl: "https://placehold.co/600x400/jpg",
+      },
+      {
+        title: "Retail Storefront",
+        description:
+          "Negotiated a long-term lease for a prime retail location.",
+        imageUrl: "https://placehold.co/600x400/jpg",
+      },
+    ],
+  },
+  {
+    slug: "reza-karimi",
+    name: "Reza Karimi",
+    title: "Residential Agent",
+    startDate: "2022-03-20",
+    imageUrl: "https://placehold.co/400x400/jpg",
+    phone: "+989123456787",
+    whatsapp: "+989123456787",
+    socials: [
+      { name: "Facebook", url: "https://facebook.com/reza" },
+      { name: "Twitter", url: "https://twitter.com/reza" },
+    ],
+    portfolio: [
+      {
+        title: "Family Home in the Suburbs",
+        description: "Helped a young family find their dream home.",
+        imageUrl: "https://placehold.co/600x400/jpg",
+      },
+    ],
+  },
+  {
+    slug: "maryam-hashemi",
+    name: "Maryam Hashemi",
+    title: "Investment Advisor",
+    startDate: "2021-08-10",
+    imageUrl: "https://placehold.co/400x400/jpg",
+    phone: "+989123456786",
+    whatsapp: "+989123456786",
+    socials: [{ name: "LinkedIn", url: "https://linkedin.com/in/maryam" }],
+    portfolio: [
+      {
+        title: "Real Estate Investment Trust (REIT)",
+        description: "Advised on a multi-million dollar REIT portfolio.",
+        imageUrl: "https://placehold.co/600x400/jpg",
+      },
+      {
+        title: "Development Land",
+        description:
+          "Sourced and negotiated the purchase of land for a new development.",
+        imageUrl: "https://placehold.co/600x400/jpg",
+      },
+    ],
+  },
+];
+
+export const getAgentBySlug = (slug: string) => {
+  return agents.find((agent) => agent.slug === slug);
+};
