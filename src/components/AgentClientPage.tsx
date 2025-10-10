@@ -52,7 +52,6 @@ export const AgentProfileCard = ({ agent, lng }: { agent: Agent, lng: string }) 
         console.error('Error sharing:', error);
       }
     } else {
-      // Fallback for browsers that do not support the Web Share API
       navigator.clipboard.writeText(pageUrl);
       alert(t('linkCopied', 'Link copied to clipboard!'));
     }

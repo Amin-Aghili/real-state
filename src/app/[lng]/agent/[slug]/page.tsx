@@ -70,7 +70,7 @@ const AgentPage = async ({ params: { lng, slug } }: { params: { lng: string, slu
                             src={item.imageUrl}
                             alt={item.title}
                             fill
-                            objectFit="cover"
+                            style={{ objectFit: 'cover' }}
                           />
                         </div>
                       </div>
