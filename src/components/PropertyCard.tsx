@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import { StaticImageData } from 'next/image';
 import { Bed, Bath, Square, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslation } from '@/i18n/client';
@@ -11,7 +12,7 @@ export interface Property {
   title: string;
   location: string;
   price: number;
-  image_url: any;
+  image_url: StaticImageData;
   bedrooms: number;
   bathrooms: number;
   area: number;

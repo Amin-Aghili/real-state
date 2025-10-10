@@ -16,6 +16,10 @@ export interface Agent {
     title: string;
     description: string;
     imageUrl: string;
+    files?: {
+      name: string;
+      url: string;
+    }[];
   }[];
 }
 
@@ -37,11 +41,16 @@ export const agents: Agent[] = [
         title: "Luxury Villa in North Tehran",
         description: "Sold a 5-bedroom luxury villa with a pool.",
         imageUrl: "https://placehold.co/600x400/jpg",
+        files: [
+          { name: "Property Brochure.pdf", url: "/files/brochure.pdf" },
+          { name: "Floor Plan.pdf", url: "/files/floor-plan.pdf" },
+        ],
       },
       {
         title: "Modern Apartment Downtown",
         description: "Leased a high-end apartment with city views.",
         imageUrl: "https://placehold.co/600x400/jpg",
+        files: [{ name: "Apartment Details.pdf", url: "/files/apartment-details.pdf" }],
       },
     ],
   },
